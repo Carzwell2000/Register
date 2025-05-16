@@ -27,9 +27,15 @@ const App = () => {
 
   return (
     <div className="px-4 py-6 max-w-7xl mx-auto">
-      <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center text-blue-700">
+      <h2 className="text-xl sm:text-2xl font-bold mb-2 text-center text-blue-700">
         Visitor Records
       </h2>
+
+      {/* Count display */}
+      <p className="text-center text-gray-600 mb-6">
+        Total Visitors:{" "}
+        <span className="font-semibold text-blue-600">{visitors.length -1}</span>
+      </p>
 
       <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
         <table className="min-w-full text-sm sm:text-base text-left border-collapse">
