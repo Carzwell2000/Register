@@ -31,7 +31,7 @@ const Feedback = () => {
 
       <p className="text-center text-gray-600 mb-6">
         Total feedbacks:{" "}
-        <span className="font-semibold text-blue-600">{feedbacks.length -1}</span>
+        <span className="font-semibold text-blue-600">{feedbacks.length-1}</span>
       </p>
 
       <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
@@ -41,18 +41,18 @@ const Feedback = () => {
               {[
                 "Name",
                 "Email",
+                "Visited Before",
+                "Relevant",
+                "Expectations Met",
+                " if not,Why?",
+                "Got Something",
+                "Did You Get Assistance",
+                "Satisfaction With Support",
+                "Rating",
+                "Would Recommend Hub",
+                "Why",
                 "Improvements",
                 "Recommendations",
-                "Expectations Met",
-                "Why",
-                "Rating",
-                "Relevant",
-                "DidYouVisitBefore",
-                "WouldYouRecommendHub",
-                "Why",
-                "Got Something",
-                " DidYouGetAssistance",
-                "Satisfaction With Support",
                 "Comment",
               ].map((header) => (
                 <th
@@ -73,18 +73,18 @@ const Feedback = () => {
                 >
                   <td className="px-3 py-2 border-t border-gray-200">{item.name}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.email}</td>
-                  <td className="px-3 py-2 border-t border-gray-200">{item.improvements}</td>
-                  <td className="px-3 py-2 border-t border-gray-200">{item.recommendations}</td>
+                  <td className="px-3 py-2 border-t border-gray-200">{item.visitedBefore}</td>
+                  <td className="px-3 py-2 border-t border-gray-200">{item.relevant}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.expectationsMet}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.ifNotWhy}</td>
-                  <td className="px-3 py-2 border-t border-gray-200">{item.rating}</td>
-                  <td className="px-3 py-2 border-t border-gray-200">{item.relevant}</td>
-                  <td className="px-3 py-2 border-t border-gray-200">{item.visitedBefore}</td>
-                  <td className="px-3 py-2 border-t border-gray-200">{item.WouldYouRecommendHub}</td>
-                  <td className="px-3 py-2 border-t border-gray-200">{item.Why}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.gotSomething}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.neededAssistance}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.satisfactionWithSupport}</td>
+                  <td className="px-3 py-2 border-t border-gray-200">{item.rating}</td>
+                  <td className="px-3 py-2 border-t border-gray-200">{item.WouldYouRecommendHub}</td>
+                  <td className="px-3 py-2 border-t border-gray-200">{item.Why}</td>
+                  <td className="px-3 py-2 border-t border-gray-200">{item.improvements}</td>
+                  <td className="px-3 py-2 border-t border-gray-200">{item.recommendations}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.comment}</td>
                 </tr>
               ))
