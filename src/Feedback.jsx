@@ -42,7 +42,6 @@ const Feedback = () => {
                 "Name",
                 "Email",
                 "Visited Before",
-                "Relevant",
                 "Expectations Met",
                 " if not,Why?",
                 "Got Something",
@@ -74,7 +73,6 @@ const Feedback = () => {
                   <td className="px-3 py-2 border-t border-gray-200">{item.name}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.email}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.visitedBefore}</td>
-                  <td className="px-3 py-2 border-t border-gray-200">{item.relevant}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.expectationsMet}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.ifNotWhy}</td>
                   <td className="px-3 py-2 border-t border-gray-200">{item.gotSomething}</td>
