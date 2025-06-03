@@ -102,7 +102,7 @@ const Visitors = () => {
       <div className="text-center mt-4">
         <Link
           to="/feedback"
-          className="inline-block bg-blue-100 hover:bg-blue-100 text-black font-semibold py-2 px-4 rounded-full transition duration-200"
+          className="inline-block  text-blue-500 font-semibold py-2 px-4 rounded-full transition duration-200"
         >
           Go To Feedback
         </Link>
