@@ -25,13 +25,13 @@ const Feedback = () => {
 
   return (
     <div className="px-4 py-6 max-w-7xl mx-auto">
-      <h2 className="text-xl sm:text-2xl font-bold mb-2 text-center text-blue-700">
+      <h2 className="text-xl sm:text-2xl font-bold mb-2 text-center text-black">
         Feedback Records
       </h2>
 
       <p className="text-center text-gray-600 mb-6">
         Total feedbacks:{" "}
-        <span className="font-semibold text-blue-600">{feedbacks.length-1}</span>
+        <span className="font-semibold text-black">{feedbacks.length - 1}</span>
       </p>
 
       <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
@@ -100,7 +100,7 @@ const Feedback = () => {
       <div className="text-center mt-4">
         <Link
           to="/"
-          className="inline-block bg-green-200 hover:bg-blue-100 text-blue-600 font-semibold py-2 px-4 rounded transition duration-200"
+          className="inline-block bg-blue-100 hover:bg-blue-100 text-black font-semibold py-2 px-4 rounded-full transition duration-200"
         >
           Go To Bookings
         </Link>
