@@ -24,18 +24,18 @@ const Feedback = () => {
   }, []);
 
   return (
-    <div className="px-4 py-6 max-w-7xl mx-auto">
+    <div className="py-4 w-full bg-white">
       <h2 className="text-2xl font-bold mb-2 text-center text-black">
         Feedback Records
       </h2>
 
-      <p className="text-center text-gray-600 mb-6">
+      <p className="text-center text-gray-600 mb-4">
         Total feedbacks:{" "}
         <span className="font-semibold text-black">{feedbacks.length}</span>
       </p>
 
-      <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
-        <table className="min-w-full text-sm text-left border border-gray-300">
+      <div className="overflow-x-auto">
+        <table className="w-full text-xs text-left border border-gray-300 table-auto">
           <thead className="bg-blue-100 text-gray-700">
             <tr>
               {[
@@ -56,7 +56,7 @@ const Feedback = () => {
               ].map((header) => (
                 <th
                   key={header}
-                  className="px-4 py-2 border border-gray-300 text-sm font-medium text-center min-w-[150px]"
+                  className="px-4 py-4 border border-gray-300 font-medium text-center whitespace-normal break-words"
                 >
                   {header}
                 </th>
@@ -67,20 +67,48 @@ const Feedback = () => {
             {feedbacks.length > 0 ? (
               feedbacks.map((item) => (
                 <tr key={item.id} className="hover:bg-blue-50 transition-colors">
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.name}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.email}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.visitedBefore}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.expectationsMet}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.ifNotWhy}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.gotSomething}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.neededAssistance}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.satisfactionWithSupport}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.rating}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.WouldYouRecommendHub}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.Why}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.improvements}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.recommendations}</td>
-                  <td className="px-4 py-2 border border-gray-200 text-center">{item.comment}</td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.name}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.email}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.visitedBefore}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.expectationsMet}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.ifNotWhy}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.gotSomething}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.neededAssistance}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.satisfactionWithSupport}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.rating}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.WouldYouRecommendHub}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.Why}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.improvements}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.recommendations}
+                  </td>
+                  <td className="px-2 py-2 border border-gray-200 text-center whitespace-normal break-words">
+                    {item.comment}
+                  </td>
                 </tr>
               ))
             ) : (
