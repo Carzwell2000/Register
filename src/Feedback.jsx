@@ -24,18 +24,19 @@ const Feedback = () => {
   }, []);
 
   return (
-    <div className="py-4 w-full bg-white">
+    <div className="p-4 bg-white">
       <h2 className="text-2xl font-bold mb-2 text-center text-black">
         Feedback Records
       </h2>
 
       <p className="text-center text-gray-600 mb-4">
         Total feedbacks:{" "}
-        <span className="font-semibold text-black">{feedbacks.length}</span>
+        <span className="font-semibold text-black">{feedbacks.length - 1}</span>
       </p>
 
-      <div className="overflow-x-auto">
-        <table className="w-full text-xs text-left border border-gray-300 table-auto">
+      {/* Scrollable container on screen, disabled on print */}
+      <div className="overflow-x-auto print:overflow-visible print:!overflow-x-visible print:!max-w-none">
+        <table className="min-w-full text-xs text-left border border-gray-300 table-auto">
           <thead className="bg-blue-100 text-gray-700">
             <tr>
               {[
@@ -56,7 +57,7 @@ const Feedback = () => {
               ].map((header) => (
                 <th
                   key={header}
-                  className="px-4 py-4 border border-gray-300 font-medium text-center whitespace-normal break-words"
+                  className="px-6 py-6 border border-gray-300 font-medium text-center whitespace-normal break-words"
                 >
                   {header}
                 </th>
@@ -122,7 +123,7 @@ const Feedback = () => {
         </table>
       </div>
 
-      <div className="text-center mt-6">
+      <div className="text-center mt-6 print:hidden">
         <Link
           to="/"
           className="inline-block text-white bg-blue-600 hover:bg-blue-700 font-semibold py-2 px-6 rounded-full transition duration-200"
